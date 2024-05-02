@@ -9,11 +9,11 @@ from sqlalchemy import Column, String, ForeignKey
 
 class Review(BaseModel, Base):
     """ Review classto store review information """
-    if models.storage_t == "db":
-        __tablename__ = "reviews"
-        place_id = Column(String(128), ForeignKey("place.id"), nullable=False)
-        user_id = Column(String(128), ForeignKey("users.id"), nullable=False)
-        text = Column(String(128), nullable=False)
+    if models.storage_t == 'db':
+        __tablename__ = 'reviews'
+        place_id = Column(String(60), ForeignKey('place.id'), nullable=False)
+        user_id = Column(String(60), ForeignKey('users.id'), nullable=False)
+        text = Column(String(1024), nullable=False)
     else:
         place_id = ""
         user_id = ""
