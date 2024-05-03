@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Test cases for State class"""
+import unittest
 from tests.test_models.test_base_model import test_basemodel
 from models.state import State
 
@@ -17,9 +18,3 @@ class test_state(test_basemodel):
         """Test name attribute of State"""
         new = self.value()
         self.assertEqual(type(new.name), str)
-
-    @unittest.skip()
-    def test_countries(self):
-        """Test countries attribute of State"""
-        new = self.value()
-        self.assertEqual(type(new.coutries), list)

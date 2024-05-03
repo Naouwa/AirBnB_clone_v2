@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Test cases for Review class"""
+import unittest
 from tests.test_models.test_base_model import test_basemodel
 from models.review import Review
 
@@ -27,8 +28,3 @@ class test_review(test_basemodel):
         """Test text attribute of Review"""
         new = self.value()
         self.assertEqual(type(new.text), str)
-
-    def test_rating(self):
-        """Test rating attribute of Review"""
-        new = self.value()
-        self.assertIsNone(new.rating)

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Test cases for City class"""
+import unittest
 from tests.test_models.test_base_model import test_basemodel
 from models.city import City
 
@@ -23,7 +24,7 @@ class test_City(test_basemodel):
         new = self.value()
         self.assertEqual(type(new.name), str)
 
-    @unittest.skip()
+    @unittest.skip
     def test_population(self):
         """Test population attribute of City"""
         new = self.value()
