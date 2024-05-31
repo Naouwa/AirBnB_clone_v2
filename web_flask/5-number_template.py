@@ -36,7 +36,7 @@ def python_route(text):
 
 
 @app.route('/number/<int:n>', strict_slashes=False)
-def num_route(n):
+def number(n):
     """It displays 'n is a number'
     only if n is an integer"""
     return "{} is a number".format(n)
@@ -46,7 +46,7 @@ def num_route(n):
 def num_template_route(n):
     """It displays an HTML page with 'Number: n'
     only if n is an integer"""
-    return render_template('5-number.html', num=n)
+    return render_template('5-number.html', number=n)
 
 
 if __name__ == "__main__":
